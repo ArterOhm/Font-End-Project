@@ -8,8 +8,10 @@ const Navbar =() =>{
                 <p>LOGO</p>
             </div>
             <div className={classes.menubar}>
-                <p>Profile</p>
-                <NavLink className={classes.login} to="">Login</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/profile">
+              Profile
+            </NavLink>
+            <NavLink className={classes.login} to="">Login</NavLink>
             </div>
         </div>
     )

@@ -3,7 +3,7 @@
     height: auto;
     padding: 20px 15px;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 255, 0.201);
+    background-color: rgba(0, 0, 0, 0.043);
     color: black;
     display: flex;
     justify-content: space-between;
@@ -15,4 +15,33 @@
     display: flex;
     gap: 16px;
     align-items: center;
+  }
+
+  .login {
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    color: black;
+    text-decoration: none;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+  }
+
+  .login:hover{
+    background-color: grey;
+    font-weight: 700;
+  }
+
+  .inactive {
+    text-decoration: none;
+  }
+  
+  .active {
+    color: rgb(7, 0, 93);
+    font-weight: bold;
+    text-decoration: underline red 3px;
   }
