@@ -3,7 +3,7 @@ import classes from './Post.module.css'
 
 const Post = () => {
   return (<div className={classes.post}>
-      <Link to={`/`} style={{ textDecoration: 'none', color: 'black' }}>
+      <Link to={`/post/`} style={{ textDecoration: 'none', color: 'black' }}>
         <p>id: {}</p>
         <p>postedBy: {}</p>
         <p>title: {}</p>
