@@ -1,22 +1,34 @@
 .navbar{
     width: 100%;
     height: auto;
-    padding: 20px 15px;
+    padding: 10px 15px;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.043);
+    background-color: rgba(0, 0, 0, 0.517);
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 10px 5px rgb(0 0 0 /0.1);
+    position: sticky;
+    top: 0;
 }
 
-.menubar {
+.menubarL {
+    display: flex;
+    padding: 10px 10px;
+    gap: 16px;
+    align-items: center;
+  }
+  .menubarR {
     display: flex;
     gap: 16px;
     align-items: center;
   }
-
+  .menubarOpen {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
   .login {
     width: 75px;
     display: flex;
@@ -25,7 +37,7 @@
     background-color: #eee;
     color: black;
     text-decoration: none;
-    padding: 8px 10px;
+    padding: 10px 10px;
     box-sizing: border-box;
     border: none;
     border-radius: 6px;
@@ -45,3 +57,60 @@
     font-weight: bold;
     text-decoration: underline red 3px;
   }
+  .menubarHam{
+    display: none;
+  }
+
+  .HomeMeun{
+    display: none;
+  }
+  @media (max-width: 400px) {
+    .HomeMeun{
+      display: block;
+    }
+  .menubarHam {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px;
+    top:  0.75rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .menubarHam span{
+    width: 100%;
+    height: 0.3em;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.3em;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .menubarR {
+    display: none;
+ 
+  }
+  .menubarOpen {
+    background-color: rgba(0, 0, 0, 0.517);
+    display: flex; 
+    position: fixed;
+    gap: 16px;
+    align-items: center;
+    top:61px ;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 0.25rem;
+    gap: 10px;
+  }
+  .login {
+    margin-top:20px ;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
