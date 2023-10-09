@@ -5,9 +5,14 @@ const Navbar =() =>{
     return (
         <div className={classes.navbar}>
             <div className={classes.menubar}>
-                <p>LOGO</p>
+            <NavLink className={ classes.inactive} to="/">
+              LOGO
+            </NavLink>
             </div>
             <div className={classes.menubar}>
+            <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/create">
+              Create
+            </NavLink>
             <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/profile">
               Profile
             </NavLink>
