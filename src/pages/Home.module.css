@@ -1,7 +1,8 @@
-.container{
-
-}
-
-.feedContainer{
-    
-}
+.feedContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    max-width: 1026px;
+    width: 100%;
+    gap: 30px;
+  }
+  
