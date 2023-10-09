@@ -1,11 +1,13 @@
 import { NavLink } from 'react-router-dom'
 import classes from './Navbar.module.css'
 import { useState } from 'react'
+import { useAuth } from '../provifers/AuthProvider'
 
 
 const Navbar =() =>{
   const[menuOpen ,setMenuOpen] =useState<boolean>(false)
-  
+  const { isLoggedIn, logout } = useAuth()
+
     return (
         <nav className={classes.navbar}>
             <div className={classes.menubarL}>
@@ -13,23 +15,32 @@ const Navbar =() =>{
               LOGO
             </NavLink>
             </div>
-            <div  className={classes.menubarHam } onClick={()=>{return (setMenuOpen(!menuOpen) ,console.log(menuOpen))}} >
+            <div  className={classes.menubarHam } onClick={()=>setMenuOpen(!menuOpen) } >
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div className={menuOpen? classes.menubarR:  classes.menubarOpen}>
-            <NavLink className={classes.HomeMeun}  to="/">
+            <NavLink className={classes.HomeMeun}  to="/" >
               Home
             </NavLink>
+            {isLoggedIn ? (<>
             <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/create" >
               Create
             </NavLink>
             <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/profile" >
               Profile
             </NavLink>
-            <NavLink className={classes.login} to="/login"  >Login</NavLink >
+            <NavLink className={classes.login} onClick={logout} to="/">
+              Logout
+            </NavLink>
+            </>) : (
+            <NavLink className={classes.login} to="/Login">
+            Login
+            </NavLink>
+           )}
             </div>
+           
         </nav>
     )
 }

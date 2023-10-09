@@ -8,6 +8,24 @@ const Home = () => {
         <Title />
         <h2>Feed</h2>
         <div className={classes.feedContainer} >
+        <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
           <Post />
           <Post />
           <Post />
