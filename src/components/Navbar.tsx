@@ -11,7 +11,7 @@ const Navbar =() =>{
             <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/profile">
               Profile
             </NavLink>
-            <NavLink className={classes.login} to="">Login</NavLink>
+            <NavLink className={classes.login} to="/login">Login</NavLink>
             </div>
         </div>
     )
