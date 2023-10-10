@@ -5,10 +5,12 @@ interface IPostProps {
   post : ContentDTO
 }
 const Post = ({post}:IPostProps) => {
-  const {videoUrl ,comment ,rating } = post
+  const {videoUrl ,comment ,rating,id} = post
   return (<div className={classes.post}>
-      <Link to={`/post/`} style={{ textDecoration: 'none', color: 'black' }}>
-        <p>{videoUrl}</p>
+      <Link to={`/post/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
+        <div className={classes.viideo}>
+          <iframe width="360px" height="240px" src={videoUrl}/>
+        </div>
         <p>comment: {comment}</p>
         <p>rating: {rating}</p>
         </Link>

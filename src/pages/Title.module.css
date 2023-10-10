@@ -1,8 +1,6 @@
 .Title{
-    width: 100%;
-     max-width: 1080px; 
     height: 400px;
     background-color: rgb(160, 160, 160);
-    padding: 10px 20px;
+    margin: 10px 20px;
     top: 0;
 }
