@@ -1,24 +1,23 @@
 .feedContainer {
     display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr  ;
-    gap: 30px;
+    width: 95%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
     margin: 10px 20px;
-    max-width: 1260px;
-  width: 100%;
+    /* max-width: 1260px; */
   }
   
-  @media(max-width: 676px){
+  @media(max-width: 840px){
     .feedContainer {
       grid-template-columns: 1fr 1fr ;
-      margin: 10px 20px;
+      margin: 10px 10px;
       gap: 15px;
     }
   }
-  @media(max-width: 360px){
+  @media(max-width: 576px){
     .feedContainer {
       grid-template-columns: 1fr ;
-      margin: 10px 20px;
+      margin: 10px 10px;
       gap: 15px;
       
     }

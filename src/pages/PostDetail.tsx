@@ -11,8 +11,8 @@ const PostDetail = () => {
     return (
       <div className={classes.feedContainer}>
         <div className={classes.PostDetail}>
-        <div>
-          <YouTube videoId={PostID?.VideoCode}/>
+        <div className={classes.video} >
+          <YouTube videoId={PostID?.VideoCode} />
         </div>
         <p>comment: {PostID?.comment}</p>
         <p>rating: {PostID?.rating}</p>

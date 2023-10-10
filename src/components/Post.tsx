@@ -11,7 +11,6 @@ const Post = ({post}:IPostProps) => {
       <Link to={`/post/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
         <div className={classes.viideo}>
         <img src={thumbnailUrl} alt={videoTitle} />
-        
         </div>
         <p>comment: {comment}</p>
         <p>rating: {rating}</p>

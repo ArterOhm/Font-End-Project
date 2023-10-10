@@ -5,8 +5,8 @@ import { useAuth } from '../provifers/AuthProvider'
 
 
 const Navbar =() =>{
-  const[menuOpen ,setMenuOpen] =useState<boolean>(false)
-  const { isLoggedIn, logout } = useAuth()
+  const[menuOpen ,setMenuOpen] =useState<boolean>(true)
+  const {isLoggedIn, logout } = useAuth()
 
     return (
         <nav className={classes.navbar}>
@@ -21,10 +21,11 @@ const Navbar =() =>{
                 <span></span>
             </div>
             <div className={menuOpen? classes.menubarR:  classes.menubarOpen}>
-            <NavLink className={classes.HomeMeun}  to="/" >
+          
+            {isLoggedIn ? (<> 
+            <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)}  to="/" >
               Home
             </NavLink>
-            {isLoggedIn ? (<>
             <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/create" >
               Create
             </NavLink>

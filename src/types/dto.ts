@@ -12,8 +12,9 @@ export interface UserDTO {
   
   export interface RegisterDTO {
     username: string
-    password: string
     name: string
+    password: string
+
   }
   
   export interface CredentialDTO {
