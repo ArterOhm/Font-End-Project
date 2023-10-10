@@ -8,14 +8,11 @@ import Post from "../components/Post"
 const Home = () => {
   const { isLoggedIn } = useAuth()
   const { posts, isLoading } = usePosts() // for Hooks
-  
     console.log(posts)
-
-  
   console.log(isLoggedIn)
   if (isLoading) return <h1>Loading...</h1>
     return (
-      <div>
+      <>
         <Title />
         <h2>Feed</h2>
         <div className={classes.feedContainer} >
@@ -24,7 +21,7 @@ const Home = () => {
             return <Post key={post.id} post={post}/>
           })}
         </div>
-      </div>
+      </>
     )
   }
   

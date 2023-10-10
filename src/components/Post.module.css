@@ -8,4 +8,8 @@
     background-color: white;
     border-radius: 10px;
   }
-  
+  .viideo img{
+    width: 100%;
+    max-width: 380px;
+    height: 240px
+  }
