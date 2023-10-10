@@ -6,6 +6,7 @@ import PostDetail from "./pages/PostDetail"
 import Login from "./pages/Login"
 import './App.css'
 import Create from "./pages/Create"
+import Register from "./pages/Regicter"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <Route path="/" element={<Home />} />
     <Route path="/post/:id" element={<PostDetail />} />
     <Route path="/login" element={<Login />} />
+    <Route path="/Register" element={<Register />} />
     <Route path="/create" element={<Create />} />
   </Routes>
   </div>
