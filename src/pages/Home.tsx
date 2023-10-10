@@ -8,10 +8,7 @@ import Post from "../components/Post"
 const Home = () => {
   const { isLoggedIn } = useAuth()
   const { posts, isLoading } = usePosts() // for Hooks
-  
     console.log(posts)
-
-  
   console.log(isLoggedIn)
   if (isLoading) return <h1>Loading...</h1>
     return (

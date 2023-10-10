@@ -13,6 +13,8 @@ const usePost = () => {
       setIsLoading(true)
       try {
         const res = await axios.get<ContentDTO>(`https://api.learnhub.thanayut.in.th/content/${id}`)
+        const resNew = res.data    
+        resNew.VideoCode = resNew.videoUrl.substring(resNew.videoUrl.length-11,resNew.videoUrl.length)
         setPostID(res.data)
       } catch (err) {
         console.error(err)

@@ -12,8 +12,9 @@ const usePosts =() =>{
         setIsLoading(true)
         try {
           const res = await axios.get<ContentsDTO>('https://api.learnhub.thanayut.in.th/content/')
-
-          setPosts(res.data.data)
+          const resNew = res.data.data     
+          resNew.map((e) =>{e.VideoCode = e.videoUrl.substring(e.videoUrl.length-11,e.videoUrl.length)})
+          setPosts(res.data.data)       
         } catch (err) {
           console.error(err)
         } finally {

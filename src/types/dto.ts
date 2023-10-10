@@ -32,6 +32,7 @@ export interface UserDTO {
     postedBy: UserDTO
     createdAt: string
     updatedAt: string
+    VideoCode: string
   }
   
   export interface ContentsDTO {
