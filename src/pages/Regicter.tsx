@@ -1,23 +1,24 @@
 import {  FormEvent ,useState } from 'react'
-import classes from './Login.module.css'
+import classes from './Register.module.css'
 import useRegister from '../Hooks/useRegister'
-// import { useAuth } from '../provifers/AuthProvider'
 import { useNavigate } from 'react-router'
 
 const Register = () => {
-// const { Register } = useAuth()
-    const navigate = useNavigate()
-  const [Rusername, setRUsername] = useState<string>('')
+
+  const navigate = useNavigate()
+  const [username, setUsername] = useState<string>('')
   const [name, setName] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [RRpassword, setRRPassword] = useState<string>('')
-  const {RegisterPost} =useRegister()
+  const {RegisterPost} = useRegister()
+
   const handleSubmit = async (e :FormEvent) => {
     e.preventDefault()
    try {await (password === RRpassword)?
-        (RegisterPost (Rusername,name,password),navigate('/login')):
-        (alert(""),
-        setPassword(''),setRRPassword(''),setRUsername(''))
+        (RegisterPost (username,name,password),navigate('/login')):
+        (alert("Invalid password"),
+        setPassword(''),setRRPassword(''),setUsername(''))
+        
     } catch (err) {
       console.log(err)
     }
@@ -29,7 +30,7 @@ const Register = () => {
         type="text" placeholder="Username"
     
         onChange={(e) => {
-          setRUsername(e.target.value)
+          setUsername(e.target.value)
         }}
       />
       <label>Name</label>
