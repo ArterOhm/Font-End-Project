@@ -1,0 +1,54 @@
+.container {
+  padding: 50px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.postForm {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  background-color: #c8c8c8;
+  padding: 10px 8px;
+  border-radius: 6px;
+  gap: 5px;
+}
+
+input {
+  background-color: #eee;
+  box-shadow: 0 0 10px 5px rgb(0 0 0 / 0.1);
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  text-align: start;
+}
+textarea {
+  background-color: #eee;
+  box-shadow: 0 0 10px 5px rgb(0 0 0 / 0.1);
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  text-align: start;
+}
+.inputBody {
+  height: 250px;
+}
+
+.postForm button {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #000000;
+  margin: 15px 0 10px 0;
+  padding: 10px 75px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6px;
+}
