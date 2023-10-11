@@ -52,7 +52,7 @@ export interface UserDTO {
     rating: number
   }
   
-  export interface UpdateContentDTO {
+  export interface EditContentDTO {
     comment: string
     rating: number
   }

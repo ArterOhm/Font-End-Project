@@ -10,7 +10,7 @@ const useCreate = () => {
         headers: {'Content-Type': 'application/json' ,Authorization : `Bearer ${token}`},
       })
       } catch (err) {
-        throw new Error('Invalid CreatePost')
+        throw new Error('Con not create post')
       } 
     }
   return {CreatePost}

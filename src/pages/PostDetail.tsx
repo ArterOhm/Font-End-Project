@@ -1,6 +1,7 @@
 import YouTube from 'react-youtube'
 import usePost from '../Hooks/usePost'
 import classes from './PostDetail.module.css'
+import { Link } from 'react-router-dom'
 
 const PostDetail = () => {
     const { PostID, isLoading } = usePost()
@@ -18,6 +19,7 @@ const PostDetail = () => {
         <p>rating: {PostID?.rating}</p>
         <p>createdAt: {`${createdAt}`}</p>
         <p>updatedAt: {`${updatedAt}`}</p>
+        <Link className={classes.EditPost} to={`/post/${PostID?.id}/edit`}> EditPost </Link>
         </div>
       </div>
     )
