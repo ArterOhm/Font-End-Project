@@ -6,12 +6,13 @@ import PostDetail from "./pages/PostDetail"
 import Login from "./pages/Login"
 import './App.css'
 import Create from "./pages/Create"
-import Register from "./pages/Regicter"
+import Register from "./pages/Register"
 import EditPost from "./pages/Edit"
 
 function App() {
   return (
-    <div className="App">
+  <div className="App">
+    <div className="App-container">
   <Navbar />
   <div className="feed-container">
   <Routes>
@@ -23,6 +24,7 @@ function App() {
     <Route path="/Register" element={<Register />} />
     <Route path="/create" element={<Create />} />
   </Routes>
+  </div>
   </div>
   </div>)
 
