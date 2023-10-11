@@ -10,6 +10,7 @@ import Register from "./pages/Register"
 import EditPost from "./pages/Edit"
 
 function App() {
+  
   return (
   <div className="App">
     <div className="App-container">

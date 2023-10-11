@@ -4,6 +4,8 @@ import classes from './PostDetail.module.css'
 import { Link, useNavigate} from 'react-router-dom'
 import { FormEvent, useState } from 'react'
 import useDelete from '../Hooks/useDelete'
+import Time from '../Tools/Time'
+
 
 const PostDetail = () => {
     const { PostID, isLoading } = usePost()
@@ -15,8 +17,7 @@ const PostDetail = () => {
     
     const createdAt = new Date(`${PostID?.createdAt}`)
     const updatedAt = new Date(`${PostID?.updatedAt}`)
-
-
+    
 
 
     const ClickDelete = async (e: FormEvent) => {
@@ -50,6 +51,7 @@ const PostDetail = () => {
         <p>rating: {PostID?.rating}</p>
         <p>createdAt: {`${createdAt}`}</p>
         <p>updatedAt: {`${updatedAt}`}</p>
+        <p>{Time(Number(updatedAt))}</p>
         <Link className={classes.EditPost} to={`/post/${PostID?.id}/edit`}> EditPost </Link>
         <a className={classes.DeletePost} onClick={()=>setAlertDel(true)}> Delete </a> 
         </div>
