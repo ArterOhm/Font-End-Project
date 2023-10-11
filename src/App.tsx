@@ -7,6 +7,7 @@ import Login from "./pages/Login"
 import './App.css'
 import Create from "./pages/Create"
 import Register from "./pages/Regicter"
+import EditPost from "./pages/Edit"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <Route path="/profile" element={<Profile />} />
     <Route path="/" element={<Home />} />
     <Route path="/post/:id" element={<PostDetail />} />
+    <Route path="/post/:id/edit" element={<EditPost/>} />
     <Route path="/login" element={<Login />} />
     <Route path="/Register" element={<Register />} />
     <Route path="/create" element={<Create />} />

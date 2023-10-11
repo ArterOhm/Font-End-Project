@@ -7,6 +7,7 @@ import { ContentDTO } from '../types/dto'
 const usePost = () => {
   const { id } = useParams()
   const [PostID, setPostID] = useState<ContentDTO | null>(null)
+
   const [isLoading, setIsLoading] = useState<boolean>(false)
   useEffect(() => {
     const fetchData = async () => {
@@ -22,11 +23,10 @@ const usePost = () => {
         setIsLoading(false)
       }
     }
-
     fetchData()
   }, [id])
 
-  return { PostID, isLoading }
+  return {PostID, isLoading}
 }
 
 export default usePost
