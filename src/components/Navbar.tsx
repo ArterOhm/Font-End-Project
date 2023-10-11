@@ -7,7 +7,7 @@ import { useAuth } from '../provifers/AuthProvider'
 const Navbar =() =>{
   const[menuOpen ,setMenuOpen] =useState<boolean>(true)
   const {isLoggedIn, logout } = useAuth()
-
+  
     return (
         <nav className={classes.navbar}>
             <div className={classes.menubarL}>

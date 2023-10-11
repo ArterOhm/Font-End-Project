@@ -34,6 +34,7 @@ export interface UserDTO {
     createdAt: string
     updatedAt: string
     VideoCode: string
+    time :string
   }
   
   export interface ContentsDTO {
