@@ -5,6 +5,9 @@ import classes from "./Edit.module.css"
 import { FormEvent, useState } from "react"
 import useEdit from "../Hooks/useEdit"
 import { useNavigate } from "react-router-dom"
+import Loading from "../Tools/Loading"
+
+
 
 
 const Edit = () => {
@@ -13,7 +16,10 @@ const Edit = () => {
   const {EditPost} = useEdit()
   const [comment, setComment] = useState<string>('')
   const [rating, setRating] = useState<number>(0)
-  if (isLoading) {return <h1>Loading...</h1>} 
+
+
+  if(isLoading) return Loading()
+
   const hendleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     try {await EditPost(comment,rating)

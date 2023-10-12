@@ -1,4 +1,4 @@
-// const ToolTime = ()=>{
+
 const Time =(Update:number) => {
     const timeDate = Number(new Date())
     let t = timeDate - Update

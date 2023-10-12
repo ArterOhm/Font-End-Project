@@ -5,6 +5,9 @@ import { Link, useNavigate} from 'react-router-dom'
 import { FormEvent, useState } from 'react'
 import useDelete from '../Hooks/useDelete'
 import Time from '../Tools/Time'
+import Loading from '../Tools/Loading'
+import Star from '../Tools/Star'
+
 
 
 const PostDetail = () => {
@@ -12,8 +15,8 @@ const PostDetail = () => {
     const navigate = useNavigate()
     const {DeletePost} = useDelete()
     const [alertDel, setAlertDel] = useState<boolean>(false)
-    if (isLoading) return <h1>Loading...</h1>
-    console.log(PostID)
+
+    if(isLoading) return Loading()
     
     const createdAt = new Date(`${PostID?.createdAt}`)
     const updatedAt = new Date(`${PostID?.updatedAt}`)
@@ -48,7 +51,7 @@ const PostDetail = () => {
         </div>
         <h3>{PostID?.videoTitle}</h3>
         <p>comment: {PostID?.comment}</p>
-        <p>rating: {PostID?.rating}</p>
+         {Star(Number(PostID?.rating))}
         <p>createdAt: {`${createdAt}`}</p>
         <p>updatedAt: {`${updatedAt}`}</p>
         <p>{Time(Number(updatedAt))}</p>
