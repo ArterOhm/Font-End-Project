@@ -1,14 +1,14 @@
 
-import classesLoading from './Loading.module.css'
+import classes from './Loading.module.css'
 
 const Loading = () =>{
      return (
-        <div className ={classesLoading.loadFlex}>
-        <div className ={classesLoading.loader}>
-          <div className ={classesLoading.circle}></div>
-          <div className ={classesLoading.circle}></div>
-          <div className ={classesLoading.circle}></div>
-          <div className ={classesLoading.circle}></div>
+        <div className ={classes.loadFlex}>
+        <div className ={classes.loader}>
+          <div className ={classes.circle}></div>
+          <div className ={classes.circle}></div>
+          <div className ={classes.circle}></div>
+          <div className ={classes.circle}></div>
         </div>
         </div>
         )

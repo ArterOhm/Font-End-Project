@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import classes from './Post.module.css'
 import { ContentDTO} from '../types/dto'
+import Star from '../Tools/Star'
 
 
 
@@ -18,10 +19,14 @@ const Post = ({post}:IPostProps) => {
         <div className={classes.viideo}>
         <img src={thumbnailUrl} alt={videoTitle} />
         </div>
-        <div>
-          <h3>{videoTitle}</h3>
-          <p>comment: {comment}</p>
-          <p>rating: {rating}</p>
+        <div className={classes.Title}>
+          <div className={classes.comment}>
+            <h3>{videoTitle}</h3>
+            <p>{comment}</p>
+          </div>
+          <div className={classes.ratingStar}>
+            {Star(rating)}
+          </div>
         </div>
       
         </Link>
